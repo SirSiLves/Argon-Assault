@@ -5,12 +5,12 @@ public class Player : MonoBehaviour
 {
 
     [Tooltip("In m^s-1")][SerializeField] float xSpeed = 20f;
-    [Tooltip("In m")] [SerializeField] float xRange = 5f;
-    [Tooltip("In m")] [SerializeField] float yRange = 3f;
+    [Tooltip("In m")] [SerializeField] float xRange = 11f;
+    [Tooltip("In m")] [SerializeField] float yRange = 7f;
 
     [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float controlPitchFactor = -20f;
-    [SerializeField] float positionYawFactor = 5f;
+    [SerializeField] float positionYawFactor = 2f;
     [SerializeField] float controlRollFactor = -20f;
 
     float xThrow, yThrow;
