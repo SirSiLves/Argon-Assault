@@ -199,7 +199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249898096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.02, z: -73.13}
+  m_LocalPosition: {x: 0, y: -0.8, z: -72.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 925082210}
@@ -219,37 +219,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 8252840258645931359}
-  lookAheadForTargetOffset: 3
+  lookAheadForTargetOffset: 2
   lookAheadForTargetFactor: -0.05
   lookAheadForSpeedOffset: 1
   lookAheadForSpeedFactor: 0.2
   progressStyle: 0
   pointToPointThreshold: 4
   target: {fileID: 249898099}
---- !u!1 &925082209 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 873327618409380472, guid: 2449f9214cdcb294fb554fcfc96d2b49,
-    type: 3}
-  m_PrefabInstance: {fileID: 872892757138228748}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &925082210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 870064078533229326, guid: 2449f9214cdcb294fb554fcfc96d2b49,
     type: 3}
   m_PrefabInstance: {fileID: 872892757138228748}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &925082211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925082209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e81ce2162a27a94459ed90e58838d4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1459342689
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,21 +335,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 870064078533229326, guid: 2449f9214cdcb294fb554fcfc96d2b49,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 870064078533229326, guid: 2449f9214cdcb294fb554fcfc96d2b49,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 870064078533229326, guid: 2449f9214cdcb294fb554fcfc96d2b49,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 870064078533229326, guid: 2449f9214cdcb294fb554fcfc96d2b49,
         type: 3}
@@ -515,7 +482,7 @@ PrefabInstance:
     - target: {fileID: 8252840257221879869, guid: bd3555baf6081f840827472174bbde1d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.8
+      value: -62
       objectReference: {fileID: 0}
     - target: {fileID: 8252840257221879869, guid: bd3555baf6081f840827472174bbde1d,
         type: 3}
@@ -561,6 +528,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Circuit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252840257929318833, guid: bd3555baf6081f840827472174bbde1d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd3555baf6081f840827472174bbde1d, type: 3}
