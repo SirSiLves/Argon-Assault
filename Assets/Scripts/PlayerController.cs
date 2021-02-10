@@ -1,19 +1,23 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-
-    [Tooltip("In m^s-1")][SerializeField] float xSpeed = 20f;
+    [Header("General")]
+    [Tooltip("In m^s-1")][SerializeField] float controlSpeed = 20f;
     [Tooltip("In m")] [SerializeField] float xRange = 11f;
     [Tooltip("In m")] [SerializeField] float yRange = 7f;
 
+    [Header("Screen-position Based")]
     [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float controlPitchFactor = -20f;
+
+    [Header("Controll-throw Based")]
     [SerializeField] float positionYawFactor = 2f;
     [SerializeField] float controlRollFactor = -20f;
 
     float xThrow, yThrow;
+    bool isControlEnabled = true;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +28,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
+        if (isControlEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
+    }
+
+    public void OnPlayerDeath() // Called by string reference from Collision Handler
+    {
+        isControlEnabled = false;
     }
 
     private void ProcessRotation()
@@ -47,7 +59,7 @@ public class Player : MonoBehaviour
     {
         // Ship moving left and right
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        float xOffset = xThrow * xSpeed * Time.deltaTime;
+        float xOffset = xThrow * controlSpeed * Time.deltaTime;
         float rawXPost = transform.localPosition.x + xOffset;
         float clampedXPost = Mathf.Clamp(rawXPost, -xRange, xRange);
         transform.localPosition = new Vector3(clampedXPost, transform.localPosition.y, transform.localPosition.z);
@@ -55,7 +67,7 @@ public class Player : MonoBehaviour
 
         // Ship move up and down
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
-        float yOffset = yThrow * xSpeed * Time.deltaTime;
+        float yOffset = yThrow * controlSpeed * Time.deltaTime;
         float rawYPost = transform.localPosition.y + yOffset;
         float clampedYPost = Mathf.Clamp(rawYPost, -yRange, yRange);
         transform.localPosition = new Vector3(clampedXPost, clampedYPost, transform.localPosition.z);
