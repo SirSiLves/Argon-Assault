@@ -5,9 +5,16 @@ public class MusicPlayer : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        // don't create a new music layer if one already exist
+        int numMusicPlayer = FindObjectsOfType<MusicPlayer>().Length;
+        if (numMusicPlayer > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
-
-    // Start is called before the first frame update
 
 }
