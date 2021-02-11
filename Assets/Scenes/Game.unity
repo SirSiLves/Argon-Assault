@@ -899,10 +899,18 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 2017301340}
+    - target: {fileID: 672058701, guid: 91b2a55dba5294fdbbb740925e9e355d, type: 3}
+      propertyPath: scorePerHit
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1416886366, guid: 91b2a55dba5294fdbbb740925e9e355d, type: 3}
       propertyPath: parent
       value: 
       objectReference: {fileID: 2017301340}
+    - target: {fileID: 1416886366, guid: 91b2a55dba5294fdbbb740925e9e355d, type: 3}
+      propertyPath: scorePerHit
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2801827224947551346, guid: 91b2a55dba5294fdbbb740925e9e355d,
         type: 3}
       propertyPath: m_RootOrder
