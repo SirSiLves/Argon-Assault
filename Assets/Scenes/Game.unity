@@ -878,6 +878,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Ship
       objectReference: {fileID: 0}
+    - target: {fileID: 873327618409380472, guid: 2449f9214cdcb294fb554fcfc96d2b49,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2449f9214cdcb294fb554fcfc96d2b49, type: 3}
 --- !u!1001 &2801827225659973770
@@ -887,7 +892,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 297607715, guid: 91b2a55dba5294fdbbb740925e9e355d, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 2017301340}
     - target: {fileID: 366059211, guid: 91b2a55dba5294fdbbb740925e9e355d, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 2017301340}
+    - target: {fileID: 556407033, guid: 91b2a55dba5294fdbbb740925e9e355d, type: 3}
       propertyPath: parent
       value: 
       objectReference: {fileID: 2017301340}
@@ -899,18 +912,18 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 2017301340}
-    - target: {fileID: 672058701, guid: 91b2a55dba5294fdbbb740925e9e355d, type: 3}
-      propertyPath: scorePerHit
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1416886366, guid: 91b2a55dba5294fdbbb740925e9e355d, type: 3}
+    - target: {fileID: 1049555014, guid: 91b2a55dba5294fdbbb740925e9e355d, type: 3}
       propertyPath: parent
       value: 
       objectReference: {fileID: 2017301340}
     - target: {fileID: 1416886366, guid: 91b2a55dba5294fdbbb740925e9e355d, type: 3}
-      propertyPath: scorePerHit
-      value: 100
-      objectReference: {fileID: 0}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 2017301340}
+    - target: {fileID: 1910963964, guid: 91b2a55dba5294fdbbb740925e9e355d, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 2017301340}
     - target: {fileID: 2801827224947551346, guid: 91b2a55dba5294fdbbb740925e9e355d,
         type: 3}
       propertyPath: m_RootOrder
